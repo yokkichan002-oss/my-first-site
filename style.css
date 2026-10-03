@@ -1,0 +1,126 @@
+.card {
+    background-color: aquamarine;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;           /* ← добавь эту строку */
+    max-width: 800px;      /* ← и поставь разумный максимум в пикселях */
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* ← добавь это */
+}
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #a7e3eb;
+}
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;       /* ← добавь это */
+    margin: 0 auto;       /* ← и это, чтобы центрировать */
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.1); cursor: pointer;
+}
+button {
+    display: block;       /* превращаем в блочный элемент */
+    margin: 20px auto;    /* центрируем и добавляем отступы сверху/снизу */
+    background-color: #d39191;
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+button:hover {
+  background-color:  #ecb2b2;
+  transform: scale(1.05);
+}
+ul {
+    list-style: none;
+    margin-top: 40px;
+    display: inline-block;  /* список займет только нужную ширину */
+    text-align: left;       /* текст внутри списка выровнен по левому краю */
+    color: #2d3436;
+}
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #e0527d;         /* синий цвет как у ВК */
+    font-weight: bold;      /* жирный текст */
+    font-size: 16px;
+    transition: all 0.3s ease
+    
+}
+a:hover {
+    text-decoration: underline;  /* подчеркивание при наведении */
+    color: #ab1cee;              /* темнее при наведении */
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #275764;
+}
+h2 {
+    color: #30545e;
+}
+p {
+    color: #2d3436;
+}
+li {
+    color: #2d3436;
+}
+ul li::before {
+    content: "✨ ";   /* здесь будет эмодзи перед каждым пунктом */
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.8s ease-out;
+}
+@media (max-width: 600px) {
+    .card {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+    
+    img {
+        width: 120px;
+        height: 120px;
+    }
+}
