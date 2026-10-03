@@ -124,3 +124,9 @@ ul li::before {
         height: 120px;
     }
 }
+#link {
+    pointer-events: none;
+    color: #999;
+    cursor: not-allowed;
+    text-decoration: none;
+}
